@@ -1,0 +1,470 @@
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Info Section */
+.infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.textContainer {
+  flex: 1;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.level {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #5d5c5c;
+  letter-spacing: -0.02em;
+}
+
+/* User Info */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.userImageContainer {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.userImageContainer:hover {
+  transform: scale(1.05);
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--softTextColor, #666);
+}
+
+.username {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2d2d2d;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+/* Featured Image */
+.imageContainer {
+  flex: 1;
+  height: 420px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageContainer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.02);
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.post {
+  flex: 5;
+  max-width: 100%;
+}
+
+/* Description/Post Content */
+.description {
+  line-height: 1.8;
+  color: #333;
+}
+
+.description p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.description h1,
+.description h2,
+.description h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.description ul,
+.description ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.description img {
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Comments Section */
+.comment {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1536px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .infoContainer {
+    gap: 3rem;
+  }
+  
+  .content {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .infoContainer {
+    gap: 2.5rem;
+  }
+  
+  .imageContainer {
+    height: 380px;
+  }
+  
+  .content {
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .infoContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    height: 400px;
+    order: -1;
+  }
+  
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .description p {
+    font-size: 1.0625rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .imageContainer {
+    height: 300px;
+    border-radius: 12px;
+  }
+  
+  .user {
+    padding: 0.75rem 0;
+  }
+  
+  .userImageContainer {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .username {
+    font-size: 1rem;
+  }
+  
+  .comment {
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 0.75rem;
+  }
+  
+  .title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .imageContainer {
+    height: 240px;
+    border-radius: 10px;
+  }
+  
+  .description p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  
+  .userImageContainer {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .username {
+    font-size: 0.9375rem;
+  }
+  
+  .date {
+    font-size: 0.8125rem;
+  }
+  
+  .comment {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .infoContainer {
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .imageContainer {
+    height: 200px;
+  }
+  
+  .description p {
+    font-size: 0.9375rem;
+  }
+}
+
+
+
+/* ----------------------------- */
+/* Update Form Styling */
+/* ----------------------------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.15);
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.saveBtn,
+.cancelBtn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.saveBtn {
+  background: linear-gradient(135deg, #0070f3, #3291ff);
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background: linear-gradient(135deg, #0057cc, #227af0);
+  transform: translateY(-2px);
+}
+
+.cancelBtn {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.cancelBtn:hover {
+  background: #ebebeb;
+  transform: translateY(-2px);
+}
+
+/* Edit/Delete Button Styling */
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 300;
+  transition: all 0.25s ease;
+}
+
+.editBtn {
+  background: #76a1d9;
+  color: #fff;
+}
+
+.editBtn:hover {
+  background: #005ad1;
+  transform: translateY(-2px);
+}
+
+.deleteBtn {
+  background: #cc6b6b;
+  color: #fff;
+}
+
+.deleteBtn:hover {
+  background: #e63939;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .form {
+    padding: 1.25rem;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .saveBtn,
+  .cancelBtn {
+    width: 100%;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    width: 100%;
+  }
+}

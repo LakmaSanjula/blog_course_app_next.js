@@ -1,0 +1,422 @@
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: #0A3A2E;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Top Section with cream background and curved bottom */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% - 180px);
+  background: #FFFBF0;
+  border-radius: 0 0 50px 50px;
+  z-index: 0;
+}
+
+/* Header Section */
+.header {
+  position: relative;
+  z-index: 1;
+  padding: 40px 80px 0;
+  margin-bottom: 40px;
+}
+
+.userAvatars {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4A574, #C19668);
+  border: 3px solid #FFFBF0;
+  margin-left: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar:nth-child(2) {
+  background: linear-gradient(135deg, #E8B088, #D4A574);
+}
+
+.avatar:nth-child(3) {
+  background: linear-gradient(135deg, #C9956A, #B68860);
+}
+
+.avatarInitial {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.learnersBadge {
+  background: #2C2C2C;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Main Content Section */
+.mainContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 0 80px;
+  margin-bottom: 60px;
+}
+
+.leftSection {
+  flex: 1;
+  max-width: 600px;
+}
+
+.rightSection {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Main Title */
+.mainTitle {
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.titleOrange {
+  display: block;
+  font-size: 56px;
+  font-weight: 400;
+  color: #D97634;
+  font-family: 'Playfair Display', serif;
+}
+
+.titleBlack {
+  display: block;
+  font-size: 56px;
+  font-weight: 600;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Description */
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+/* Search Container */
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 16px 50px 16px 20px;
+  border: 2px solid #2C2C2C;
+  border-radius: 30px;
+  font-size: 15px;
+  outline: none;
+  background: #FFFFFF;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: #D97634;
+}
+
+.searchInput::placeholder {
+  color: #999999;
+}
+
+.searchButton {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2C2C2C;
+}
+
+.searchButton:hover {
+  color: #D97634;
+}
+
+/* Right Section - Image and Badges */
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.categoryBadges {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.badge {
+  padding: 10px 20px;
+  border: 2px solid #2C2C2C;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  background: #FFFFFF;
+  color: #2C2C2C;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.badge:first-child {
+  background: #F4E5A1;
+  border-color: #F4E5A1;
+}
+
+.badge:hover {
+  background: #D97634;
+  border-color: #D97634;
+  color: #FFFFFF;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(217, 118, 52, 0.3);
+}
+
+/* Footer Section */
+.footer {
+  position: relative;
+  z-index: 1;
+  background: #0A3A2E;
+  margin: 0;
+  padding: 40px 80px 50px;
+  text-align: center;
+  border-radius: 0 0 50px 50px;
+}
+
+.footerText {
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.partnerLogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.logoPlaceholder {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1280px) {
+  .titleOrange,
+  .titleBlack {
+    font-size: 48px;
+  }
+  
+  .mainContent {
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .titleOrange,
+  .titleBlack {
+    font-size: 40px;
+  }
+  
+  .header {
+    padding: 30px 40px 0;
+  }
+  
+  .mainContent {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 40px;
+  }
+  
+  .leftSection,
+  .rightSection {
+    max-width: 100%;
+  }
+  
+  .categoryBadges {
+    position: static;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .footer {
+    padding: 30px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titleOrange,
+  .titleBlack {
+    font-size: 32px;
+  }
+  
+  .header {
+    padding: 20px 24px 0;
+  }
+  
+  .mainContent {
+    padding: 0 24px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+  
+  .description br {
+    display: none;
+  }
+  
+  .searchContainer {
+    max-width: 100%;
+  }
+  
+  .partnerLogos {
+    gap: 40px;
+  }
+  
+  .logoPlaceholder {
+    font-size: 18px;
+  }
+  
+  .footer {
+    padding: 24px 24px 30px;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .learnersBadge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .titleOrange,
+  .titleBlack {
+    font-size: 28px;
+  }
+  
+  .mainContent {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .badge {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  
+  .categoryBadges {
+    gap: 8px;
+  }
+  
+  .partnerLogos {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titleOrange,
+  .titleBlack {
+    font-size: 24px;
+  }
+  
+  .header {
+    padding: 16px 16px 0;
+  }
+  
+  .mainContent {
+    padding: 0 16px;
+  }
+  
+  .searchInput {
+    padding: 12px 45px 12px 16px;
+    font-size: 14px;
+  }
+  
+  .footer {
+    padding: 20px 16px 30px;
+  }
+  
+  .partnerLogos {
+    gap: 20px;
+  }
+  
+  .logoPlaceholder {
+    font-size: 16px;
+  }
+}

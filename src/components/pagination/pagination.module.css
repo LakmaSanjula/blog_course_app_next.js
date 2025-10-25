@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center; /* centers both buttons */
+  gap: 100px; /* adds space between buttons */
+  margin-top: 50px; /* optional: adds space above */
+}
+
+.button {
+  width: 100px;
+  border: none;
+  padding: 16px;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px; /* optional: makes buttons smoother */
+}
+
+.button:disabled {
+  background-color: rgba(220, 20, 60, 0.473);
+  cursor: not-allowed;
+}
